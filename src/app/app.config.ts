@@ -6,8 +6,12 @@ import { provideHttpClient } from '@angular/common/http';
 import { CART_OPTIONS_TOKEN } from '@catalog/cart.service';
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideHttpClient(), {
-    provide: CART_OPTIONS_TOKEN,
-    useValue: { persistenceType: 'none', persistenceKey: 'cart' },
-  }]
+  providers: [
+    provideRouter(routes),
+    provideHttpClient(),
+    {
+      provide: CART_OPTIONS_TOKEN,
+      useValue: { persistenceType: 'none', persistenceKey: 'cart' },
+    },
+  ],
 };
